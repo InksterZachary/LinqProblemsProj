@@ -35,17 +35,18 @@ namespace PracticeProblemsLINQ
         }
         #endregion
 
-        //#region Problem 3
-        ////(5 points) Problem 3
-        ////Using LINQ, write a method that takes in a list of customers and returns the lone customer who has the name of Mike. 
-        //public static Customer RunProblem3(List<Customer> customers)
-        //{
-        //    //code
-
-        //    //return
-
-        //}
-        //#endregion
+        #region Problem 3
+        //(5 points) Problem 3
+        //Using LINQ, write a method that takes in a list of customers and returns the lone customer who has the name of Mike. 
+        public static Customer RunProblem3(List<Customer> customers)
+        {
+            //code
+            var loneSurvivor = customers.Where(c => c.FirstName == "Mike").ToList().FirstOrDefault();
+            //Customer result = loneSurvivor.FirstOrDefault();
+            //return
+            return loneSurvivor; //error, unable to cast type
+        }
+        #endregion
 
         //#region Problem 4
         ////(5 points) Problem 4
@@ -54,6 +55,7 @@ namespace PracticeProblemsLINQ
         //public static Customer RunProblem4(List<Customer> customers)
         //{
         //    //code
+        //    var newCustomer = customers.Where(c => c.Id == 3);
 
         //    //return
 
