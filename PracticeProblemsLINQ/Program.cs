@@ -27,7 +27,7 @@ namespace PracticeProblemsLINQ
                 new Customer(4, "Dan", "Laffey")
             };
             LinqProblems.RunProblem3(customers);
-            //LinqProblems.RunProblem4(customers);
+            LinqProblems.RunProblem4(customers);
             //Problem 5
             List<string> classGrades = new List<string>()
             {
@@ -36,12 +36,12 @@ namespace PracticeProblemsLINQ
                 "73,88,83,99,64",
                 "98,100,66,74,55"
             };
-
+            LinqProblems.RunProblem5(classGrades);
 
             //--------------------
             //Bonus Problem 1
             string letters = "terrill";
-
+            //LinqProblems.RunBonusProblem1(letters);
         }
     }
 }

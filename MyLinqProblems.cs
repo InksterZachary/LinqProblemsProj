@@ -42,40 +42,41 @@ namespace PracticeProblemsLINQ
         {
             //code
             var loneSurvivor = customers.Where(c => c.FirstName == "Mike").ToList().FirstOrDefault();
-            //Customer result = loneSurvivor.FirstOrDefault();
             //return
             return loneSurvivor; //error, unable to cast type
         }
         #endregion
 
-        //#region Problem 4
-        ////(5 points) Problem 4
-        ////Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
-        ////Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
-        //public static Customer RunProblem4(List<Customer> customers)
-        //{
-        //    //code
-        //    var newCustomer = customers.Where(c => c.Id == 3);
+        #region Problem 4
+        //(5 points) Problem 4
+        //Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
+        //Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
+        public static Customer RunProblem4(List<Customer> customers)
+        {
+            //code
+            var newCustomer = customers.Where(c => c.Id == 3).FirstOrDefault();
+            newCustomer.FirstName = "Zachary";
+            newCustomer.LastName = "Inkster";
 
-        //    //return
+            //return
+            return newCustomer;
+        }
+        #endregion
 
-        //}
-        //#endregion
-
-        //#region Problem 5
-        ////(5 points) Problem 5
-        ////Using LINQ, write a method that calculates the class grade average after dropping the lowest grade for each student.
-        ////The method should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), 
-        ////drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
-        ////Expected output: 86.125
-        //public static double RunProblem5(List<string> classGrades)
-        //{
-        //    //code
-
-        //    //return
-
-        //}
-        //#endregion
+        #region Problem 5
+        //(5 points) Problem 5
+        //Using LINQ, write a method that calculates the class grade average after dropping the lowest grade for each student.
+        //The method should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), 
+        //drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
+        //Expected output: 86.125
+        public static double RunProblem5(List<string> classGrades)
+        {
+            //code
+            var minValue = classGrades.Min(x => x.Split());
+            var result = classGrades.Where(x => x == minValue).ToList();
+            //return
+        }
+        #endregion
 
         //#region Bonus Problem 1
         ////(5 points) Bonus Problem 1
@@ -84,7 +85,7 @@ namespace PracticeProblemsLINQ
         //public static string RunBonusProblem1(string word)
         //{
         //    //code
-
+        //    var inOrder = word.Where()
         //    //return
 
         //}
